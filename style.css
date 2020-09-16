@@ -1,7 +1,7 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
 :root {
-  font-size: clamp(10px, 6vw, 20px);
+  font-size: clamp(10px, 4vw, 20px);
 }
 
 html {
@@ -28,7 +28,7 @@ a:hover {
 }
 
 ul, ol {
-  padding-left: 2rem;
+  padding: 0 2rem;
 }
 
 .home {
