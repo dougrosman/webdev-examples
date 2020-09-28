@@ -1,0 +1,78 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+main {
+  width: 100vw;
+  max-width: 60ch;
+  margin: 40px auto;
+}
+
+.main__content {
+  padding: 20px;
+}
+
+p {
+  margin: 1em 0;
+  line-height: 1.5;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 3;
+  top: 20px;
+  left: 20px;
+  padding: 5px;
+  display: block;
+}
+
+.hamburger:hover, .hamburger:active {
+  /* background: black; */
+  cursor: pointer;
+}
+
+.hamburger:active ~ .navbar {
+  left: -25%;
+}
+
+.hamburger:hover .patty {
+  background: white;
+}
+
+.patty {
+  width: 20px;
+  height: 2px;
+  background: black;
+  margin: 3px 0;
+}
+
+.hamburger:hover ~ .navbar {
+  left: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -25%;
+  height: 100vh;
+  background: lightgray;
+  width: 25%;
+  display: block;
+  transition: left .5s;
+}
+
+.navbar:hover {
+  left: 0;
+}
+
+
