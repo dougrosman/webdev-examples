@@ -1,2 +1,50 @@
 
-* { box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+  background: #23424A;
+  padding: 100px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hero__content {
+  width: 60%;
+  max-width: 750px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 48px;
+  color: white;
+  margin-bottom: .5em;
+}
+
+p { 
+  color: white;
+  line-height: 1.5;
+  font-size: 21px;
+  margin-bottom: 2em;
+}
+
+.button {
+  font-weight: 700;
+  background: #38CFD9;
+  border: unset;
+  padding: .6em 2.2em;
+  border-radius: 500px;
+  font-size: 21px;
+  text-transform: uppercase;
+  width: max-content;
+  color: #23424A;
+  margin: 2em 0;
+  letter-spacing: 1px;
+}
