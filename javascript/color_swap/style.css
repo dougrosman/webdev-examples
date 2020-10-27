@@ -1,0 +1,9 @@
+#box {
+  width: 50vmin;
+  height: 50vmin;
+  background: gray;
+}
+
+#font-swap {
+  font-size: 2rem;
+}

@@ -19,7 +19,7 @@ let counter = 1;
 
 $("#img-swap").click(swapImage);
 
-setInterval(swapImage, 600);
+// setInterval(swapImage, 600);
 
 function swapImage() {
     let imgPath = `images/${imageNames[counter]}`;
