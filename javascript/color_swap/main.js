@@ -9,22 +9,40 @@ $(document).ready(function(){
     "green"
   ]
 
+  let fonts = [
+    "Arial",
+    "Trebuchet",
+    "Lucida Sans",
+    "Comic Sans MS",
+    "Verdana",
+    "Dancing Script"
+  ]
+
   let index = 0;
+  $('#box').click(colorSwap);
+  setInterval(colorSwap, 1000);
 
-  $('#box').click(function(){
+  let fontIndex = 0;
+  $('#font-swap').click(swapFont);
+  setInterval(swapFont, 1000);
 
-    
+  function swapFont() {
+    let currentFont = fonts[fontIndex];
+    $("#font-swap").css("font-family", currentFont);
+    fontIndex++;
+    if(fontIndex == fonts.length) {
+      fontIndex = 0;
+    }
+  }
+
+  function colorSwap() {
     let currentColor = colors[index];
-
     $('#box').css("background", currentColor);
-
-    // increment index
     index++;
-    console.log(index);
-  })
-
-
-
+    if(index == colors.length) {
+      index = 0;
+    }
+  }
 })
 
 
