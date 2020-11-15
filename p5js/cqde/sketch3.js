@@ -30,7 +30,7 @@ function draw() {
   let size = max(windowWidth, windowHeight)*2;
   let s = map(sin(frameCount/400), -1, 1, 100, size);
   scale(s);
-  box(1, 1);
+  box(1);
   pop();
 }
 
