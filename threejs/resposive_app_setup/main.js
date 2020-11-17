@@ -42,7 +42,7 @@ const cube = new Mesh(geometry, material);
 scene.add(cube);
 
 // create the renderer, turn on antialiasing
-const renderer = new WebGLRenderer({ anialias: true});
+const renderer = new WebGLRenderer({ antialias: true});
 
 // next, set the renderer to the same size as our container element
 renderer.setSize(container.clientWidth, container.clientHeight);
