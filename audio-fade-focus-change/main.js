@@ -10,18 +10,22 @@
 const fadeDelay = 16; // milliseconds between each time the fade function is called
 const fadeRepetitions = 100; // how many times the fade function is called (basically, the duration of the fade)
 
-
+// fires when the user navigates to the window
 window.addEventListener('focus', function (event) {
     console.log('gained focus');
     focusStatus.textContent = "has focus (fade in)"
     audioFadeIn(fadeDelay, fadeRepetitions)
 });
 
+// fires when the user navigates away from the window
 window.addEventListener('blur', function (event) {
     console.log('lost focus');
     focusStatus.textContent = "lost focus (fade out)"
     audioFadeOut(fadeDelay, fadeRepetitions)
 });
+
+
+// there's probably a more elegant way to do this than creating two separate functions (audioFadeIn and audioFadeOut), but it works, and helps to keep the setInterval functions separate I think
 
 
 function audioFadeIn(delay, repetitions) {
@@ -39,8 +43,10 @@ function audioFadeIn(delay, repetitions) {
         }
         // pre-increments x before checking to see if it has repeated the correct amount
         if (++x === repetitions) {
-            // stop the interval
+            // stop the interval to stop the fade
             window.clearInterval(intervalID);
+
+            // just to be safe, set the volume to 1 (it should probably be at .99 or something at this point anyway)
             sound.volume = 1;
         }
     }, delay);
@@ -59,8 +65,10 @@ function audioFadeOut(delay, repetitions) {
         }
         // pre-increments x before checking to see if it has repeated the correct amount
         if (++x === repetitions) {
-            // stop the interval
+            // stop the interval to stop the fade
             window.clearInterval(intervalID);
+
+            // just to be safe, set the volume to 1 (it should probably be at .01 or something at this point anyway)
             sound.volume = 0;
         }
     }, delay);
